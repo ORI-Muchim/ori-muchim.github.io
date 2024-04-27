@@ -1,0 +1,109 @@
+@charset "utf-8";
+a {
+  text-decoration: underline;
+}
+
+a:link {
+  color: #483D8B;
+}
+
+a:visited {
+  color: #800000;
+}
+
+a:active {
+  color: red;
+}
+
+a:hover, a:focus {
+  color: red;
+  font-weight: bold;
+  font-size: 110%
+}
+
+body {
+  font-family: 'Lucida Sans Unicode', Verdana, 'ヒラギノ角ゴ Pro W3', 'ヒラギノ角ゴ3', sans-serif;
+  font-size: 10pt;
+  line-height: 145%;
+  background-color: #ffffff;
+  color: #001100;
+  border-style: none;
+  margin: 2em 2em 2em 2em;
+}
+
+p, address {
+  padding: 0.2em 0.2em 0.0em 2em;
+  text-indent: 1em;
+}
+
+li {
+  padding: 0.1em 0.2em 0.0em 0em;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'ヒラギノ角ゴ Pro W6', 'ヒラギノ角ゴ6', Verdana, sans-serif;
+}
+
+h1 {
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  text-align: left;
+  font-size: 150%;
+  color: #000;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 1.0em 0.1em 0.2em 0.4em;
+  padding: 3px;
+  font-size: 120%;
+  border-color: brown;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+}
+
+h3 {
+  margin: 0.2em 0.1em 0.2em 1em;
+  padding: 3px;
+  font-size: 110%;
+  border-style: dotted;
+  border-color: brown;
+  border-width: 0px 0px 1px 0px;
+}
+
+h4 {
+  margin: 1em 0.1em 0.2em 2em;
+  padding: 3px;
+  font-size: 105%;
+}
+
+strong {
+  color: purple;
+  font-weight: bold;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+pre {
+  white-space: pre;
+  margin: 1em;
+  padding: 1em;
+  line-height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  overflow: auto;
+  background-color: #fcfcfc;
+}
+
+ol, dl {
+  list-style-position: outside;
+  margin: 0.2em 0.2em 0.2em 2em;
+}
+
+hr {
+  color: #003300;
+  height: 1px;
+}
