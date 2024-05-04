@@ -3,6 +3,12 @@ a {
   text-decoration: underline;
 }
 
+.noto-serif-kr-regular {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 a:link {
   color: #483D8B;
 }
