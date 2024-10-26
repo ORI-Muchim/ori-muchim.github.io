@@ -1,131 +1,286 @@
-@charset "utf-8";
-
-a {
-  text-decoration: underline;
-  font-family: "Noto Serif KR", serif;
+:root {
+    --primary-color: #2d3436;
+    --secondary-color: #0984e3;
+    --accent-color: #00b894;
+    --text-color: #2d3436;
+    --light-gray: #f5f6fa;
+    --border-color: #dfe6e9;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
 }
 
-.noto-serif-kr-regular {
-  font-family: "Noto Serif KR", serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-a:link {
-  color: #483D8B;
-  font-family: "Noto Serif KR", serif;
-}
-
-a:visited {
-  color: #800000;
-  font-family: "Noto Serif KR", serif;
-}
-
-a:active {
-  color: red;
-  font-family: "Noto Serif KR", serif;
-}
-
-a:hover, a:focus {
-  color: red;
-  font-weight: bold;
-  font-size: 110%;
-  font-family: "Noto Serif KR", serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Noto Serif KR", serif;
-  font-size: 12pt;
-  line-height: 145%;
-  background-color: #ffffff;
-  color: #001100;
-  border-style: none;
-  margin: 2em 2em 2em 2em;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #ffffff;
 }
 
-p, address {
-  padding: 0.2em 0.2em 0.0em 2em;
-  text-indent: 1em;
-  font-family: "Noto Serif KR", serif;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;  /* 2rem에서 1.5rem으로 축소 */
+}        
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 5rem;  /* 3rem에서 2.5rem으로 축소 */
+    background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%);
+    border-radius: 20px;
+    margin-bottom: 1.5rem;  /* 3rem에서 1.5rem으로 축소 */
+    box-shadow: var(--card-shadow);
 }
 
-li {
-  padding: 0.1em 0.2em 0.0em 0em;
-  font-family: "Noto Serif KR", serif;
+.profile-image {
+    flex-shrink: 0;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Noto Serif KR", serif;
+.profile-image img {
+    width: 200px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
 }
 
+.profile-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.profile-info h1 {
+    margin-bottom: 0.5rem;
+}
+
+.profile-info > p {  /* 소개 텍스트 */
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Typography */
 h1 {
-  margin: 0.2em 0.2em 0.2em 0.2em;
-  text-align: left;
-  font-size: 150%;
-  color: #000;
-  font-weight: bold;
-  font-family: "Noto Serif KR", serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 h2 {
-  margin: 1.0em 0.1em 0.2em 0.4em;
-  padding: 3px;
-  font-size: 120%;
-  border-color: brown;
-  border-width: 0px 0px 1px 0px;
-  border-style: solid;
-  font-family: "Noto Serif KR", serif;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin: 1rem 0 0.8rem;  /* 상단 여백 2rem에서 1rem으로 축소 */
+    font-weight: 500;
 }
 
 h3 {
-  margin: 0.2em 0.1em 0.2em 1em;
-  padding: 3px;
-  font-size: 110%;
-  border-style: dotted;
-  border-color: brown;
-  border-width: 0px 0px 1px 0px;
-  font-family: "Noto Serif KR", serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.5rem;
+    font-weight: 500;
 }
 
-h4 {
-  margin: 1em 0.1em 0.2em 2em;
-  padding: 3px;
-  font-size: 105%;
-  font-family: "Noto Serif KR", serif;
+/* Section Styles */
+.section {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;  /* 2rem에서 1.5rem으로 축소 */
+    margin-bottom: 1.5rem;  /* 2rem에서 1.5rem으로 축소 */
+    box-shadow: var(--card-shadow);
 }
 
-strong {
-  color: purple;
-  font-weight: bold;
-  font-family: "Noto Serif KR", serif;
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;  /* 2rem에서 1.5rem으로 축소 */
+    margin-top: 1rem;  /* 1.5rem에서 1rem으로 축소 */
 }
 
-em {
-  font-weight: bold;
-  font-style: normal;
-  font-family: "Noto Serif KR", serif;
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
 }
 
-pre {
-  white-space: pre;
-  margin: 1em;
-  padding: 1em;
-  line-height: 100%;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  overflow: auto;
-  background-color: #fcfcfc;
-  font-family: "Noto Serif KR", serif;
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
-ol, dl {
-  list-style-position: outside;
-  margin: 0.2em 0.2em 0.2em 2em;
-  font-family: "Noto Serif KR", serif;
+/* Tags/Keywords */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
 }
 
-hr {
-  color: #003300;
-  height: 1px;
+.tag {
+    background: var(--light-gray);
+    color: var(--secondary-color);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.tag:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* Links */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Lists */
+ul, ol {
+    list-style-position: inside;
+    margin: 1rem 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;  /* 세로 배치로 변경 */
+    gap: 0.8rem;  /* 항목 간 간격 */
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;  /* 아이콘과 텍스트 사이 간격 */
+}
+
+.contact-item span:first-child {  /* 이모지 아이콘 */
+    font-size: 1.2rem;
+    min-width: 1.5rem;  /* 아이콘 영역 고정 너비 */
+    display: flex;
+    justify-content: center;
+}
+
+.contact-item a,
+.contact-item span:last-child {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .header {
+        padding: 1.5rem;  /* 모바일에서 패딩 추가 축소 */
+        margin-bottom: 1rem;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 195px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* Certificate Section */
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.certificate-card {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.certificate-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow);
+}
+
+/* Timeline for Experience */
+.timeline {
+    position: relative;
+    margin: 1rem 0;  /* 2rem에서 1rem으로 축소 */
+}
+
+.timeline-item {
+    padding: 1.2rem;  /* 1.5rem에서 1.2rem으로 축소 */
+    margin-left: 2rem;
+    border-left: 3px solid var(--secondary-color);
+    position: relative;
+    margin-bottom: 1.2rem;  /* 1.5rem에서 1.2rem으로 축소 */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 2rem;
+    width: 13px;
+    height: 13px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
 }
