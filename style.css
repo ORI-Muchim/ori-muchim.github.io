@@ -102,6 +102,7 @@ a:hover {
 .profile-image {
   flex-shrink: 0;
   margin-right: 2rem;
+  margin-top: 1rem;
 }
 
 .profile-image img {
@@ -109,7 +110,13 @@ a:hover {
   height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: var(--card-shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: var(--transition);
+}
+
+.profile-image img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .profile-info {
@@ -577,6 +584,8 @@ ul li::before {
     width: 120px;
     height: 120px;
   }
+  
+  /* 모바일 사이즈 조정 */
 
   .profile-info {
     align-items: center;
@@ -615,6 +624,14 @@ ul li::before {
   --card-bg: #252A33;
   --border-color: #333D4B;
   --hover-color: #2C313A;
+}
+
+.dark-mode .profile-image img {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .profile-image img:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode .section,
