@@ -222,8 +222,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // 다크모드 토글 활성화 (원하는 경우 주석 해제)
-    // setupDarkModeToggle();
+    // 다크모드 토글 활성화
+    setupDarkModeToggle();
 
     // 현재 연도 표시
     const yearElement = document.querySelector('.current-year');
