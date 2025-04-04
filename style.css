@@ -495,7 +495,8 @@ ul li::before {
 .theme-toggle {
   position: fixed;
   top: 2rem;
-  right: 2rem;
+  right: 0;
+  left: auto;
   width: 3rem;
   height: 3rem;
   background: var(--card-bg);
@@ -547,7 +548,19 @@ ul li::before {
 }
 
 /* Responsive Design */
+@media (min-width: 1200px) {
+  .theme-toggle {
+    right: calc((100% - 1140px) / 2 - 2rem);
+    left: auto;
+  }
+}
+
 @media (max-width: 768px) {
+  .theme-toggle {
+    right: 0;
+    left: auto;
+  }
+  
   .header {
     flex-direction: column;
     align-items: center;
