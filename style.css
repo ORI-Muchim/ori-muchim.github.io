@@ -562,6 +562,12 @@ ul li::before {
   }
 }
 
+@media (min-width: 1200px) {
+  .scroll-top-btn {
+    right: calc((100% - 1140px) / 2 - 2.1rem); /* theme-toggle보다 4rem 왼쪽 */
+  }
+}
+
 @media (max-width: 768px) {
   .theme-toggle {
     right: 0;
