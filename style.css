@@ -109,6 +109,7 @@ a:hover {
   width: 160px;
   height: 160px;
   object-fit: cover;
+  object-position: center 1%;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: var(--transition);
